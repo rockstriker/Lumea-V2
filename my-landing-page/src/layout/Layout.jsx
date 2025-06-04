@@ -1,28 +1,53 @@
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-blue-100 shadow-sm">
-    <div className="max-w-screen-xl mx-auto px-8 py-3 flex items-center justify-between">
-      {/* Logo/Brand */}
-      <a href="#" className="text-2xl font-bold text-gray-900 tracking-tight">LUMEA</a>
-      {/* Navigation Links + CTA */}
-      <div className="flex items-center gap-8">
-        <div className="hidden md:flex gap-6">
-          <a href="#" className="text-base font-medium text-gray-700 hover:text-blue-600 transition">La carte</a>
-          <a href="#" className="text-base font-medium text-gray-700 hover:text-blue-600 transition">L'outil d'organisation</a>
-          <a href="#" className="text-base font-medium text-gray-700 hover:text-blue-600 transition">Tarifs</a>
-          <a href="#" className="text-base font-medium text-gray-700 hover:text-blue-600 transition">À propos</a>
-        </div>
-        <a href="#" className="ml-4 px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition text-sm md:text-base whitespace-nowrap">
-          Créer mon compte
+  <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      {/* Logo */}
+      <div className="flex items-center">
+        <img
+          src="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230052FF'/%3E%3C/svg%3E"
+          alt="LUMEA"
+          className="h-8 w-8 mr-2"
+        />
+        <a href="#" className="text-[#0052FF] font-bold text-2xl">LUMEA</a>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="hidden md:flex items-center space-x-8">
+        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Accueil</a>
+        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Carte Lumea</a>
+        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Outil d'organisation</a>
+      </div>
+
+      {/* CTA Buttons */}
+      <div className="hidden md:flex items-center space-x-4">
+        <a
+          href="#"
+          className="px-6 py-2 text-[#0052FF] border border-[#0052FF] rounded-full hover:bg-[#0052FF] hover:text-white transition-colors whitespace-nowrap"
+        >
+          Tester mon éligibilité à la carte
+        </a>
+        <a
+          href="#"
+          className="px-6 py-2 bg-[#FF6D00] text-white rounded-full hover:bg-orange-600 transition-colors whitespace-nowrap"
+        >
+          Accès à l'outil Lumea
         </a>
       </div>
+
+      {/* Mobile Menu Button */}
+      <button className="md:hidden">
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </div>
   </nav>
 );
 
 const Layout = ({ children }) => (
-  <div className="min-h-screen flex flex-col bg-white">
+  <div className="min-h-screen bg-white">
     <Navbar />
-    <main className="flex-1 pt-20 md:pt-16">{children}</main>
+    <main className="pt-[72px]">{children}</main>
   </div>
 );
 
