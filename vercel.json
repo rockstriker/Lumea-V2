@@ -1,19 +1,13 @@
 {
   "version": 2,
-  "builds": [
+  "buildCommand": "cd my-landing-page && npm install && npm run build",
+  "outputDirectory": "my-landing-page/dist",
+  "installCommand": "cd my-landing-page && npm install",
+  "framework": "vite",
+  "rewrites": [
     {
-      "src": "my-landing-page/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "my-landing-page/dist",
-        "buildCommand": "cd my-landing-page && npm install && npm run build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/my-landing-page/dist/$1"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ]
 } 

@@ -7,14 +7,9 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   build: {
-    outDir: resolve(__dirname, 'dist'),
+    outDir: 'dist',
     emptyOutDir: true,
-    sourcemap: true,
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'index.html')
-      }
-    }
+    sourcemap: true
   },
   server: {
     port: 3000,
