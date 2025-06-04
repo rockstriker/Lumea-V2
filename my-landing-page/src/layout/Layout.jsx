@@ -1,5 +1,5 @@
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+  <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 font-sans">
     <div className="container mx-auto px-6 py-4 flex items-center justify-between">
       {/* Logo */}
       <div className="flex items-center">
@@ -8,27 +8,27 @@ const Navbar = () => (
           alt="LUMEA"
           className="h-8 w-8 mr-2"
         />
-        <a href="#" className="text-[#0052FF] font-bold text-2xl">LUMEA</a>
+        <a href="#" className="text-primary font-bold text-2xl">LUMEA</a>
       </div>
 
       {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Accueil</a>
-        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Carte Lumea</a>
-        <a href="#" className="text-gray-700 hover:text-[#0052FF]">Outil d'organisation</a>
+        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Accueil</a>
+        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Carte Lumea</a>
+        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Outil d'organisation</a>
       </div>
 
       {/* CTA Buttons */}
       <div className="hidden md:flex items-center space-x-4">
         <a
           href="#"
-          className="px-6 py-2 text-[#0052FF] border border-[#0052FF] rounded-full hover:bg-[#0052FF] hover:text-white transition-colors whitespace-nowrap"
+          className="px-6 py-2 text-primary border border-primary rounded-full hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
         >
           Tester mon éligibilité à la carte
         </a>
         <a
           href="#"
-          className="px-6 py-2 bg-[#FF6D00] text-white rounded-full hover:bg-orange-600 transition-colors whitespace-nowrap"
+          className="px-6 py-2 bg-secondary text-white rounded-full hover:bg-orange-600 transition-colors whitespace-nowrap"
         >
           Accès à l'outil Lumea
         </a>
@@ -45,7 +45,7 @@ const Navbar = () => (
 );
 
 const Layout = ({ children }) => (
-  <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-white font-sans">
     <Navbar />
     <main className="pt-[72px]">{children}</main>
   </div>

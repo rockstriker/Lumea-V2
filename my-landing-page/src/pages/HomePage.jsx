@@ -3,17 +3,17 @@ import Layout from '../layout/Layout';
 const HomePage = () => (
   <Layout>
     {/* Hero Section */}
-    <section className="w-full bg-white text-center pt-24 pb-16">
+    <section className="w-full bg-white text-center pt-24 pb-16 font-sans">
       <div className="container mx-auto px-4">
-        <h1 className="text-[40px] md:text-[48px] font-bold text-[#0052FF] mb-4 max-w-[800px] mx-auto leading-tight">
+        <h1 className="text-[40px] md:text-[48px] font-bold text-primary mb-4 max-w-[800px] mx-auto leading-tight">
           Simplifiez la vie des aidants,
           <br />
           facilitez celle de vos proches
         </h1>
-        <p className="text-[18px] text-gray-600 mb-8 max-w-[600px] mx-auto">
+        <p className="text-[18px] text-gray-600 mb-8 max-w-[600px] mx-auto font-normal">
           Lumea centralise, organise et suit toutes les démarches administratives et médicales pour vous soulager au quotidien.
         </p>
-        <button className="px-8 py-3 bg-[#FF6D00] text-white rounded-full font-medium hover:bg-orange-600 transition-colors">
+        <button className="px-8 py-3 bg-secondary text-white rounded-full font-medium hover:bg-orange-600 transition-colors">
           Tester Lumea
         </button>
       </div>

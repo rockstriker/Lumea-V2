@@ -1,3 +1,5 @@
+import { defineConfig } from 'vite'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +7,15 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
+      colors: {
+        'primary': '#0052FF',
+        'secondary': '#FF6D00',
+      }
+    },
   },
   plugins: [],
 } 
