@@ -4,12 +4,13 @@ import { defineConfig } from 'vite'
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        'heading': ['Poppins', 'sans-serif'],
+        'sans': ['Poppins', 'sans-serif'],
       },
       colors: {
         'primary': '#0052FF',

@@ -1,21 +1,27 @@
 import Layout from '../layout/Layout';
+import arrowIcon from '../assets/icons.svg';
 
 const HomePage = () => (
   <Layout>
     {/* Hero Section */}
-    <section className="w-full bg-white text-center pt-24 pb-16 font-sans">
+    <section className="w-full bg-white pt-24 pb-16 font-sans">
       <div className="container mx-auto px-4">
-        <h1 className="text-[40px] md:text-[48px] font-bold text-primary mb-4 max-w-[800px] mx-auto leading-tight">
-          Simplifiez la vie des aidants,
+        <h1 className="text-[48px] font-semibold text-[#003FE3] text-center leading-[120%] max-w-[743px] mx-auto font-heading">
+          Vous prenez soin d'un proche.
           <br />
-          facilitez celle de vos proches
+          Qui prend soin de vous ?
         </h1>
-        <p className="text-[18px] text-gray-600 mb-8 max-w-[600px] mx-auto font-normal">
-          Lumea centralise, organise et suit toutes les démarches administratives et médicales pour vous soulager au quotidien.
+        <p className="text-[24px] text-[#003FE3] text-center max-w-[592px] mx-auto font-normal leading-[130%] tracking-[-0.24px] mt-6">
+          Lumea est votre copilote pour toutes les démarches administratives, médicales et familiales.
         </p>
-        <button className="px-8 py-3 bg-secondary text-white rounded-full font-medium hover:bg-orange-600 transition-colors">
-          Tester Lumea
-        </button>
+        <div className="text-center mt-8">
+          <button 
+            className="h-[44px] inline-flex items-center justify-center px-4 py-2 bg-[#F97316] text-white rounded-lg gap-2 hover:bg-[#E56200] transition-colors text-[20px] font-normal leading-[140%] tracking-[-0.2px]"
+          >
+            <span>Découvrir Lumea</span>
+            <img src={arrowIcon} alt="→" className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </section>
 

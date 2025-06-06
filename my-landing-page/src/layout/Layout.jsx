@@ -1,36 +1,28 @@
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 w-full bg-white shadow-sm z-50 font-sans">
-    <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+  <nav className="fixed top-0 left-0 w-full bg-white z-50 font-sans" style={{ boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.10)' }}>
+    <div className="w-full max-w-[1512px] mx-auto flex items-center justify-between px-6 md:px-8 lg:px-[30px] py-5">
       {/* Logo */}
       <div className="flex items-center">
         <img
-          src="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='%230052FF'/%3E%3C/svg%3E"
+          src="/src/assets/logo.svg"
           alt="LUMEA"
-          className="h-8 w-8 mr-2"
+          className="h-8 w-auto"
         />
-        <a href="#" className="text-primary font-bold text-2xl">LUMEA</a>
       </div>
 
-      {/* Navigation Links */}
+      {/* Navigation Links - Simplified */}
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Accueil</a>
-        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Carte Lumea</a>
-        <a href="#" className="text-gray-700 hover:text-primary transition-colors">Outil d'organisation</a>
+        <a href="#" className="text-[#1A1A1A] hover:text-primary transition-colors text-base font-medium">L'outil Lumea</a>
+        <a href="#" className="text-[#1A1A1A] hover:text-primary transition-colors text-base font-medium">À propos</a>
       </div>
 
-      {/* CTA Buttons */}
-      <div className="hidden md:flex items-center space-x-4">
+      {/* CTA Button - Simplified */}
+      <div className="hidden md:block">
         <a
           href="#"
-          className="px-6 py-2 text-primary border border-primary rounded-full hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+          className="inline-block px-6 py-3 bg-[#FF6D00] text-white rounded-lg hover:bg-[#E56200] transition-colors whitespace-nowrap text-base font-medium"
         >
-          Tester mon éligibilité à la carte
-        </a>
-        <a
-          href="#"
-          className="px-6 py-2 bg-secondary text-white rounded-full hover:bg-orange-600 transition-colors whitespace-nowrap"
-        >
-          Accès à l'outil Lumea
+          Accéder à Lumea
         </a>
       </div>
 
