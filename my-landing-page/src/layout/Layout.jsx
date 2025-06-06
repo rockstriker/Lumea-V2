@@ -4,7 +4,7 @@ const Navbar = () => (
       {/* Logo */}
       <div className="flex items-center">
         <img
-          src="/src/assets/logo.svg"
+          src="/logo.svg"
           alt="LUMEA"
           className="h-10 w-auto"
         />

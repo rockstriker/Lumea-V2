@@ -217,7 +217,7 @@ const HomePage = () => (
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo bas gauche */}
           <div className="mb-4 md:mb-0">
-            <img src="/src/assets/logo-light.svg" alt="Lumea logo" className="h-12 w-12" />
+            <img src="/logo-light.svg" alt="Lumea logo" className="h-12 w-12" />
           </div>
           {/* Mentions */}
           <div className="flex gap-8 text-base font-medium">
