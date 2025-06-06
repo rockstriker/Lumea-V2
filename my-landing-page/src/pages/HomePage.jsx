@@ -33,8 +33,6 @@ const SplitSection = ({
   titleBlue,
   titleBlack,
   text,
-  imgSrc,
-  imgAlt,
   reverse = false,
 }) => (
   <section className="w-full py-20">
@@ -50,9 +48,6 @@ const SplitSection = ({
           En savoir plus
           <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="#0052FF" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
         </button>
-      </div>
-      <div className="flex-1 flex justify-center">
-        <img src={imgSrc} alt={imgAlt} className="w-full max-w-[500px] rounded-2xl shadow-xl object-contain" />
       </div>
     </div>
   </section>
@@ -78,7 +73,6 @@ const HomePage = () => (
         {/* Illustration centrale */}
         <div className="mt-20 flex justify-center">
           <div className="relative w-full max-w-[1100px] rounded-[32px] bg-gradient-to-b from-[#EAF2FF] to-[#3B82F6] shadow-2xl px-8 pt-16 pb-12 flex flex-col items-center">
-            <img src="/mockup-laptop-accueil.png" alt="Dashboard Lumea réaliste" className="w-[560px] h-[332px] object-contain drop-shadow-lg rounded-2xl border border-[#EAF2FF] bg-white" />
             <div className="relative z-20 flex flex-col md:flex-row justify-between gap-8 mt-12 w-full">
               <div className="bg-white rounded-[24px] p-8 flex-1 shadow-lg border border-[#EAF2FF] min-w-[280px]">
                 <h3 className="text-[22px] font-bold text-[#FF6D00] mb-3 font-heading">Moins de charge mentale</h3>
@@ -101,11 +95,6 @@ const HomePage = () => (
     {/* Features Section */}
     <section className="w-full bg-[#0052FF] py-20">
       <div className="container mx-auto px-4">
-        <div className="max-w-[800px] mx-auto mb-16">
-          <div className="bg-white rounded-2xl p-10 shadow-xl">
-            <img src="/mockup-laptop.png" alt="Dashboard Lumea" className="w-full" />
-          </div>
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] mx-auto">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-[#EAF2FF] flex flex-col items-start">
@@ -137,8 +126,6 @@ const HomePage = () => (
       text={
         `Grâce à un questionnaire de départ, Lumea identifie les démarches adaptées à votre situation (APA, MDPH, mutuelle, procuration...) et vous guide étape par étape avec des checklists automatiques.\n\nImportez vos fichiers une seule fois : Lumea les analyse, les classe par démarche et les duplique si besoin. Plus besoin de chercher ou de scanner à répétition.`
       }
-      imgSrc="/mockup-laptop-accueil.png"
-      imgAlt="Questionnaire d'éligibilité Lumea"
       reverse={false}
     />
 
@@ -150,8 +137,6 @@ const HomePage = () => (
       text={
         `Un espace centralisé pour stocker tous les documents essentiels (pièce d'identité, justificatifs, ordonnances...), accessible en un clic, même en mobilité.\n\nVisualisez tous les rendez-vous médicaux et échéances à venir. Coordonnez-vous facilement avec les autres aidants et les soignants.\n\nAjoutez des aidants secondaires ou des professionnels. L'accès aux infos peut être ajusté selon les rôles. Vous n'êtes plus seul(e) à tout gérer.`
       }
-      imgSrc="/mockup-laptop.png"
-      imgAlt="Espace collaboratif Lumea"
       reverse={true}
     />
 
@@ -232,7 +217,7 @@ const HomePage = () => (
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo bas gauche */}
           <div className="mb-4 md:mb-0">
-            <img src="/src/assets/logo.svg" alt="Lumea logo" className="h-12 w-12" />
+            <img src="/src/assets/logo-light.svg" alt="Lumea logo" className="h-12 w-12" />
           </div>
           {/* Mentions */}
           <div className="flex gap-8 text-base font-medium">

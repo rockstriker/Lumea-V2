@@ -1,12 +1,12 @@
 const Navbar = () => (
   <nav className="fixed top-0 left-0 w-full bg-white z-50 font-sans" style={{ boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.10)' }}>
-    <div className="w-full max-w-[1512px] mx-auto flex items-center justify-between px-6 md:px-8 lg:px-[30px] py-5">
+    <div className="w-full max-w-[1512px] mx-auto flex items-center justify-between px-6 md:px-8 lg:px-[30px] py-2">
       {/* Logo */}
       <div className="flex items-center">
         <img
           src="/src/assets/logo.svg"
           alt="LUMEA"
-          className="h-8 w-auto"
+          className="h-10 w-auto"
         />
       </div>
 
