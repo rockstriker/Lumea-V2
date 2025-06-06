@@ -42,14 +42,6 @@ LUMEA s’appuie sur une **recherche qualitative** (entretiens approfondis) pour
 - Authentification : OAuth2 / FranceConnect (à l’étude)
 - Hébergement : Vercel
 
-## 🚧 Statut du projet
-
-- [x] Phase de recherche utilisateur
-- [ ] Prototype basse fidélité (Wireframes)
-- [ ] Tests utilisateurs sur prototype
-- [ ] Développement MVP
-- [ ] Mise en ligne beta
-
 ## 🤝 Contribuer
 
 Tu veux aider à faire avancer LUMEA ? Tu es développeur·euse, designer, aidant ou professionnel de santé ?
