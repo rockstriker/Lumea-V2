@@ -1,343 +1,6 @@
 import Layout from '../layout/Layout';
 import arrowIcon from '../assets/icons.svg';
 
-const HomePage = () => (
-  <Layout>
-    {/* Hero Section */}
-    <section className="w-full bg-white pt-24 pb-16 font-sans">
-      <div className="container mx-auto px-4">
-        <h1 className="text-[48px] font-semibold text-[#003FE3] text-center leading-[120%] max-w-[743px] mx-auto font-heading">
-          Vous prenez soin d'un proche.
-          <br />
-          Qui prend soin de vous ?
-        </h1>
-        <p className="text-[24px] text-[#003FE3] text-center max-w-[592px] mx-auto font-normal leading-[130%] tracking-[-0.24px] mt-6">
-          Lumea est votre copilote pour toutes les démarches administratives, médicales et familiales.
-        </p>
-        <div className="text-center mt-8">
-          <button 
-            className="h-[44px] inline-flex items-center justify-center px-4 py-2 bg-[#F97316] text-white rounded-lg gap-2 hover:bg-[#E56200] transition-colors text-[20px] font-normal leading-[140%] tracking-[-0.2px]"
-          >
-            <span>Découvrir Lumea</span>
-            <img src={arrowIcon} alt="→" className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Features Section */}
-        <div className="mt-16">
-          <div className="mx-auto rounded-[30px] bg-[#4285F4] relative" style={{ width: '1293px' }}>
-            {/* Microsoft Surface Book */}
-            <div className="absolute" style={{ 
-              width: '560px',
-              height: '332px',
-              left: '371.76px',
-              top: '57.56px'
-            }}>
-              <div className="relative w-full h-full">
-                <img 
-                  src="/MicrosoftSurfaceBook.png"
-                  alt="Microsoft Surface Book"
-                  className="w-full h-full object-contain"
-                />
-                <img 
-                  src="/accueil1.png"
-                  alt="Interface Lumea"
-                  className="absolute top-[10%] left-[8%] w-[84%] h-[75%] object-cover"
-                  style={{
-                    borderRadius: '2px'
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Feature Cards */}
-            <div className="flex justify-between gap-8 p-8" style={{ marginTop: '450px' }}>
-              <div className="bg-white rounded-[20px] p-6 flex-1">
-                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Moins de charge mentale</h3>
-                <p className="mt-4 text-[#003FE3]">
-                  Lumea automatise l'organisation des démarches, vous rappelle les échéances importantes et vous guide pas à pas selon votre situation.
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[20px] p-6 flex-1">
-                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Tout au même endroit</h3>
-                <p className="mt-4 text-[#003FE3]">
-                  Un coffre-fort numérique sécurisé pour stocker tous les documents utiles, et des dossiers organisés automatiquement selon les besoins (APA, MDPH, mutuelle...).
-                </p>
-              </div>
-
-              <div className="bg-white rounded-[20px] p-6 flex-1">
-                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Une coordination facilitée</h3>
-                <p className="mt-4 text-[#003FE3]">
-                  Partagez les rendez-vous et les informations avec les autres aidants ou soignants grâce à un calendrier commun et un espace collaboratif.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Laptop Section with Gradient Background */}
-        <div className="flex justify-center mt-[56px]">
-          <div style={{
-            width: '1293px',
-            height: '509px',
-            borderRadius: '30px',
-            background: 'linear-gradient(180deg, #3F8CFF 0%, #003FE3 100%)',
-            flexShrink: 0,
-            marginLeft: '109.5px',
-            marginRight: '109.5px'
-          }}>
-            <img 
-              src="/mockup-laptop.png" 
-              alt="Dashboard Lumea"
-              className="w-full h-full object-contain p-8"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Feature Overview Section */}
-    <section className="w-full bg-[#0052FF] py-16">
-      <div className="container mx-auto px-4">
-        {/* Laptop Mockup */}
-        <div className="max-w-[800px] mx-auto mb-16">
-          <div className="bg-white rounded-lg p-8">
-            <img 
-              src="/mockup-laptop.png" 
-              alt="Dashboard Lumea"
-              className="w-full"
-              style={{ content: 'url("data:image/svg+xml,%3Csvg width=\'800\' height=\'500\' viewBox=\'0 0 800 500\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'800\' height=\'500\' fill=\'%23F5F5F5\'/%3E%3Ctext x=\'400\' y=\'250\' font-family=\'Arial\' font-size=\'24\' fill=\'%23666\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E[Mockup visuel]%3C/text%3E%3C/svg%3E")' }}
-            />
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl p-6">
-              <h3 className="text-[#0052FF] font-semibold text-xl mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* Partners Logos Section */}
-    <section className="w-full bg-[#F8FAFF] py-16">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center gap-12 flex-wrap">
-          {/* Replace with actual partner logos */}
-          <img src="assurance-maladie.svg" alt="L'Assurance Maladie" className="h-12" />
-          <img src="docaposte.svg" alt="Docaposte" className="h-12" />
-          <img src="france-identite.svg" alt="France Identité Numérique" className="h-12" />
-          <img src="france-connect.svg" alt="France Connect" className="h-12" />
-        </div>
-      </div>
-    </section>
-
-    {/* Split Sections */}
-    <section className="w-full py-20">
-      <div className="container mx-auto px-4">
-        {/* First Split */}
-        <div className="flex flex-col md:flex-row items-center gap-12 mb-20">
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-[#FF6D00]">Organiser</span>{' '}
-              <span className="text-[#0052FF]">votre</span>{' '}
-              <br />vie d'aidant
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Tableau de bord de gestion des démarches administratives,
-              <br />Agenda partagés entre aidant,
-              <br />coffre fort numérique.
-            </p>
-            <button className="px-6 py-2 border border-[#0052FF] text-[#0052FF] rounded-full hover:bg-[#0052FF] hover:text-white transition-colors">
-              En savoir plus
-            </button>
-          </div>
-          <div className="flex-1">
-            <img 
-              src="/dashboard-mockup.png" 
-              alt="Dashboard"
-              className="w-full rounded-lg shadow-lg"
-              style={{ content: 'url("data:image/svg+xml,%3Csvg width=\'600\' height=\'400\' viewBox=\'0 0 600 400\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23F5F5F5\'/%3E%3Ctext x=\'300\' y=\'200\' font-family=\'Arial\' font-size=\'24\' fill=\'%23666\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E[Mockup visuel]%3C/text%3E%3C/svg%3E")' }}
-            />
-          </div>
-        </div>
-
-        {/* Second Split (Mirrored) */}
-        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-          <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4">
-              <span className="text-[#FF6D00]">Organiser</span>{' '}
-              <span className="text-[#0052FF]">votre</span>{' '}
-              <br />vie d'aidant
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Tableau de bord de gestion des démarches administratives,
-              <br />Agenda partagés entre aidant,
-              <br />coffre fort numérique.
-            </p>
-            <button className="px-6 py-2 border border-[#0052FF] text-[#0052FF] rounded-full hover:bg-[#0052FF] hover:text-white transition-colors">
-              En savoir plus
-            </button>
-          </div>
-          <div className="flex-1">
-            <img 
-              src="/dashboard-mockup-2.png" 
-              alt="Dashboard"
-              className="w-full rounded-lg shadow-lg"
-              style={{ content: 'url("data:image/svg+xml,%3Csvg width=\'600\' height=\'400\' viewBox=\'0 0 600 400\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Crect width=\'600\' height=\'400\' fill=\'%23F5F5F5\'/%3E%3Ctext x=\'300\' y=\'200\' font-family=\'Arial\' font-size=\'24\' fill=\'%23666\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3E[Mockup visuel]%3C/text%3E%3C/svg%3E")' }}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Pricing Section */}
-    <section className="w-full bg-[#FFF4EE] py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">Tarification</h2>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-          Choisissez l'abonnement pour une utilisation illimitée ou optez pour le paiement par prestation pour répondre à vos besoins ponctuels.
-        </p>
-        
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Solo Plan */}
-          <div className="bg-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-2">Forfait solo</h3>
-            <div className="text-3xl font-bold text-[#0052FF] mb-6">5€<span className="text-lg text-gray-500">/mois</span></div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Carte statut aidant
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                L'outil d'organisation
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Coffre fort numérique
-              </li>
-            </ul>
-            <button className="w-full px-6 py-3 bg-[#FF6D00] text-white rounded-full hover:bg-orange-600 transition-colors">
-              Obtenir les services Lumea
-            </button>
-          </div>
-
-          {/* Family Plan */}
-          <div className="bg-white rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-2">Forfait famille</h3>
-            <div className="text-3xl font-bold text-[#0052FF] mb-6">10€<span className="text-lg text-gray-500">/mois</span></div>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Jusqu'à 5 aidants
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Coffre fort numérique
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                </svg>
-                Recommandations ciblées
-              </li>
-            </ul>
-            <button className="w-full px-6 py-3 bg-[#0052FF] text-white rounded-full hover:bg-blue-600 transition-colors">
-              Je m'organise avec Lumea
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* Footer */}
-    <footer className="w-full bg-[#0052FF] text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12">
-          {/* Column 1: LUMEA */}
-          <div>
-            <h4 className="font-bold mb-4">LUMEA</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">Coffre fort numérique</a></li>
-              <li><a href="#" className="hover:underline">Registre aidant aux démarches administratives</a></li>
-              <li><a href="#" className="hover:underline">Suivi des démarches</a></li>
-              <li><a href="#" className="hover:underline">Carte Lumea</a></li>
-            </ul>
-          </div>
-
-          {/* Column 2: Links */}
-          <div>
-            <h4 className="font-bold mb-4">Lumea</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">À propos</a></li>
-              <li><a href="#" className="hover:underline">Partenaires</a></li>
-              <li><a href="#" className="hover:underline">Contactez-nous</a></li>
-            </ul>
-          </div>
-
-          {/* Column 3: Newsletter */}
-          <div>
-            <h4 className="font-bold mb-4">Inscrivez-vous à notre newsletter</h4>
-            <div className="bg-[#003EBF] p-6 rounded-xl">
-              <p className="text-sm mb-4">
-                Recevez tous les mois nos nouveautés pour être informé de l'avancement de nos services technologiques et de nos offres.
-              </p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="flex-1 px-4 py-2 rounded-full text-gray-900"
-                />
-                <button className="px-6 py-2 bg-[#FF6D00] rounded-full hover:bg-orange-600 transition-colors">
-                  →
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="mt-12 pt-8 border-t border-[#003EBF] flex flex-wrap justify-between items-center">
-          <div className="flex items-center gap-6">
-            <a href="#" className="hover:underline">Mentions légales</a>
-            <a href="#" className="hover:underline">Politique de confidentialité</a>
-            <a href="#" className="hover:underline">CGU</a>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href="#" className="hover:opacity-80">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </a>
-            <a href="#" className="hover:opacity-80">
-              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </Layout>
-);
-
-// Feature data
 const features = [
   {
     title: "La Carte Lumea",
@@ -364,5 +27,229 @@ const features = [
     description: "Moins de stress, moins d'incertitudes. Vous êtes soutenu, organisé et reconnu dans votre rôle."
   }
 ];
+
+const SplitSection = ({
+  titleOrange,
+  titleBlue,
+  titleBlack,
+  text,
+  imgSrc,
+  imgAlt,
+  reverse = false,
+}) => (
+  <section className="w-full py-20">
+    <div className={`container mx-auto px-4 flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16`}>
+      <div className="flex-1">
+        <h2 className="text-[40px] md:text-[44px] font-bold leading-tight mb-6">
+          <span className="text-[#FF6D00]">{titleOrange} </span>
+          <span className="text-[#0052FF]">{titleBlue} </span>
+          <span className="text-[#222] font-black">{titleBlack}</span>
+        </h2>
+        <div className="text-[#444] text-lg md:text-xl leading-relaxed mb-8 whitespace-pre-line">{text}</div>
+        <button className="inline-flex items-center px-8 py-3 border-2 border-[#0052FF] text-[#0052FF] rounded-full font-semibold text-lg hover:bg-[#F5F8FF] transition-colors group">
+          En savoir plus
+          <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="#0052FF" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+      <div className="flex-1 flex justify-center">
+        <img src={imgSrc} alt={imgAlt} className="w-full max-w-[500px] rounded-2xl shadow-xl object-contain" />
+      </div>
+    </div>
+  </section>
+);
+
+const HomePage = () => (
+  <Layout>
+    {/* Hero Section */}
+    <section className="w-full bg-white pt-28 pb-20 font-sans">
+      <div className="container mx-auto px-4">
+        <h1 className="text-[56px] font-bold text-[#003FE3] text-center leading-tight max-w-[743px] mx-auto font-heading tracking-tight">
+          Vous prenez soin d'un proche.<br />Qui prend soin de vous ?
+        </h1>
+        <p className="text-[24px] text-[#003FE3] text-center max-w-[592px] mx-auto font-normal leading-[130%] tracking-[-0.24px] mt-8">
+          Lumea est votre copilote pour toutes les démarches administratives, médicales et familiales.
+        </p>
+        <div className="text-center mt-12">
+          <button className="h-[52px] inline-flex items-center justify-center px-8 py-3 bg-[#FF6D00] text-white rounded-full gap-3 hover:bg-[#E56200] transition-colors text-[22px] font-semibold leading-[140%] tracking-[-0.2px] shadow-lg">
+            <span>Découvrir Lumea</span>
+            <img src={arrowIcon} alt="→" className="w-6 h-6" />
+          </button>
+        </div>
+        {/* Illustration centrale */}
+        <div className="mt-20 flex justify-center">
+          <div className="relative w-full max-w-[1100px] rounded-[32px] bg-gradient-to-b from-[#EAF2FF] to-[#3B82F6] shadow-2xl px-8 pt-16 pb-12 flex flex-col items-center">
+            <img src="/mockup-laptop-accueil.png" alt="Dashboard Lumea réaliste" className="w-[560px] h-[332px] object-contain drop-shadow-lg rounded-2xl border border-[#EAF2FF] bg-white" />
+            <div className="relative z-20 flex flex-col md:flex-row justify-between gap-8 mt-12 w-full">
+              <div className="bg-white rounded-[24px] p-8 flex-1 shadow-lg border border-[#EAF2FF] min-w-[280px]">
+                <h3 className="text-[22px] font-bold text-[#FF6D00] mb-3 font-heading">Moins de charge mentale</h3>
+                <p className="text-[#003FE3] text-[16px] leading-[140%] font-normal">Lumea automatise l'organisation des démarches, vous rappelle les échéances importantes et vous guide pas à pas selon votre situation.</p>
+              </div>
+              <div className="bg-white rounded-[24px] p-8 flex-1 shadow-lg border border-[#EAF2FF] min-w-[280px]">
+                <h3 className="text-[22px] font-bold text-[#FF6D00] mb-3 font-heading">Tout au même endroit</h3>
+                <p className="text-[#003FE3] text-[16px] leading-[140%] font-normal">Un coffre-fort numérique sécurisé pour stocker tous les documents utiles, et des dossiers organisés automatiquement selon les besoins (APA, MDPH, mutuelle...).</p>
+              </div>
+              <div className="bg-white rounded-[24px] p-8 flex-1 shadow-lg border border-[#EAF2FF] min-w-[280px]">
+                <h3 className="text-[22px] font-bold text-[#FF6D00] mb-3 font-heading">Une coordination facilitée</h3>
+                <p className="text-[#003FE3] text-[16px] leading-[140%] font-normal">Partagez les rendez-vous et les informations avec les autres aidants ou soignants grâce à un calendrier commun et un espace collaboratif.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Features Section */}
+    <section className="w-full bg-[#0052FF] py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-[800px] mx-auto mb-16">
+          <div className="bg-white rounded-2xl p-10 shadow-xl">
+            <img src="/mockup-laptop.png" alt="Dashboard Lumea" className="w-full" />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-[1200px] mx-auto">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-[#EAF2FF] flex flex-col items-start">
+              <h3 className="text-[#0052FF] font-semibold text-xl mb-2 font-heading">{feature.title}</h3>
+              <p className="text-gray-600 text-base">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Partners Logos Section */}
+    <section className="w-full bg-[#F8FAFF] py-16">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center items-center gap-16 flex-wrap">
+          <img src="assurance-maladie.svg" alt="L'Assurance Maladie" className="h-14" />
+          <img src="docaposte.svg" alt="Docaposte" className="h-14" />
+          <img src="france-identite.svg" alt="France Identité Numérique" className="h-14" />
+          <img src="france-connect.svg" alt="France Connect" className="h-14" />
+        </div>
+      </div>
+    </section>
+
+    {/* Section 1 : Gestion intelligente des démarches */}
+    <SplitSection
+      titleOrange="Gestion intelligente"
+      titleBlue="des démarches"
+      titleBlack=""
+      text={
+        `Grâce à un questionnaire de départ, Lumea identifie les démarches adaptées à votre situation (APA, MDPH, mutuelle, procuration...) et vous guide étape par étape avec des checklists automatiques.\n\nImportez vos fichiers une seule fois : Lumea les analyse, les classe par démarche et les duplique si besoin. Plus besoin de chercher ou de scanner à répétition.`
+      }
+      imgSrc="/mockup-laptop-accueil.png"
+      imgAlt="Questionnaire d'éligibilité Lumea"
+      reverse={false}
+    />
+
+    {/* Section 2 : Espace collaboratif pensé pour les aidants */}
+    <SplitSection
+      titleOrange="Espace collaboratif"
+      titleBlue="pensé pour les aidants"
+      titleBlack=""
+      text={
+        `Un espace centralisé pour stocker tous les documents essentiels (pièce d'identité, justificatifs, ordonnances...), accessible en un clic, même en mobilité.\n\nVisualisez tous les rendez-vous médicaux et échéances à venir. Coordonnez-vous facilement avec les autres aidants et les soignants.\n\nAjoutez des aidants secondaires ou des professionnels. L'accès aux infos peut être ajusté selon les rôles. Vous n'êtes plus seul(e) à tout gérer.`
+      }
+      imgSrc="/mockup-laptop.png"
+      imgAlt="Espace collaboratif Lumea"
+      reverse={true}
+    />
+
+    {/* Pricing Section */}
+    <section className="w-full bg-[#FFF4EE] py-24">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-8 font-heading">Tarification</h2>
+        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">Choisissez l'abonnement pour une utilisation illimitée ou optez pour le paiement par prestation pour répondre à vos besoins ponctuels.</p>
+        <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          {/* Solo Plan */}
+          <div className="bg-white rounded-2xl p-10 shadow-lg flex flex-col items-center border border-[#EAF2FF]">
+            <h3 className="text-2xl font-bold mb-2 font-heading">Forfait solo</h3>
+            <div className="text-4xl font-bold text-[#0052FF] mb-8">5€<span className="text-lg text-gray-500">/mois</span></div>
+            <ul className="space-y-4 mb-10 w-full">
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>Carte statut aidant</li>
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>L'outil d'organisation</li>
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>Coffre fort numérique</li>
+            </ul>
+            <button className="w-full px-8 py-4 bg-[#FF6D00] text-white rounded-full hover:bg-orange-600 transition-colors font-semibold text-lg">Obtenir les services Lumea</button>
+          </div>
+          {/* Family Plan */}
+          <div className="bg-white rounded-2xl p-10 shadow-lg flex flex-col items-center border border-[#EAF2FF]">
+            <h3 className="text-2xl font-bold mb-2 font-heading">Forfait famille</h3>
+            <div className="text-4xl font-bold text-[#0052FF] mb-8">10€<span className="text-lg text-gray-500">/mois</span></div>
+            <ul className="space-y-4 mb-10 w-full">
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>Jusqu'à 5 aidants</li>
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>Coffre fort numérique</li>
+              <li className="flex items-center text-lg"><svg className="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>Recommandations ciblées</li>
+            </ul>
+            <button className="w-full px-8 py-4 bg-[#0052FF] text-white rounded-full hover:bg-blue-600 transition-colors font-semibold text-lg">Je m'organise avec Lumea</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer Figma */}
+    <footer className="w-full bg-[#0052FF] text-white pt-20 pb-10 mt-0">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-12 items-start">
+          {/* Colonne 1 */}
+          <div>
+            <h4 className="font-bold mb-6 text-lg uppercase tracking-wide">LUMEA</h4>
+            <ul className="space-y-3 text-base">
+              <li>Coffre fort numérique</li>
+              <li>Planneur adapté aux aidants !</li>
+              <li>Suivi des démarches administratives</li>
+              <li>Carte Lumea</li>
+            </ul>
+          </div>
+          {/* Colonne 2 */}
+          <div>
+            <h4 className="font-bold mb-6 text-lg">Lumea</h4>
+            <ul className="space-y-3 text-base">
+              <li>A propos</li>
+              <li>Partenaires</li>
+              <li>Contactez nous</li>
+            </ul>
+          </div>
+          {/* Colonne 3 : Newsletter */}
+          <div>
+            <div className="bg-[#0033B3] rounded-[36px] p-10 flex flex-col gap-6">
+              <div className="flex items-start mb-2">
+                <span className="text-2xl mr-3 mt-1">👉</span>
+                <span className="font-bold text-2xl leading-tight">Inscrivez vous à notre<br/>newsletter</span>
+              </div>
+              <form className="flex w-full mb-2">
+                <input type="email" placeholder="Adresse Email" className="flex-1 h-[56px] px-6 rounded-l-[18px] text-[#0033B3] text-lg font-medium placeholder-gray-400 outline-none bg-white border-none" style={{minWidth:'0'}} />
+                <button type="submit" className="h-[56px] w-[56px] bg-[#002288] rounded-r-[18px] flex items-center justify-center -ml-1">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </button>
+              </form>
+              <p className="text-lg text-white opacity-90 leading-snug">Abonnez-vous à notre newsletter pour être informé du lancement officiel, des nouvelles fonctionnalités et des mises à jour importantes.</p>
+            </div>
+          </div>
+        </div>
+        {/* Ligne de séparation */}
+        <div className="border-t border-white border-opacity-20 my-10"></div>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Logo bas gauche */}
+          <div className="mb-4 md:mb-0">
+            <img src="/src/assets/logo.svg" alt="Lumea logo" className="h-12 w-12" />
+          </div>
+          {/* Mentions */}
+          <div className="flex gap-8 text-base font-medium">
+            <a href="#" className="hover:underline">Mentions légales</a>
+            <a href="#" className="hover:underline">Politiques de confidentialité</a>
+            <a href="#" className="hover:underline">CGU</a>
+          </div>
+          {/* Réseaux sociaux */}
+          <div className="flex gap-4">
+            <a href="#" className="rounded-full border border-white border-opacity-30 p-2 hover:bg-white hover:bg-opacity-10 transition"><svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 01-12 0C4 5.238 6.238 3 9 3s5 2.238 5 5z"/><circle cx="12" cy="12" r="10"/></svg></a>
+            <a href="#" className="rounded-full border border-white border-opacity-30 p-2 hover:bg-white hover:bg-opacity-10 transition"><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04A4.28 4.28 0 0016.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.1.99C7.69 8.99 4.07 7.13 1.64 4.16c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 01-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 012 19.54c-.28 0-.56-.02-.83-.05A12.13 12.13 0 006.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0024 4.59a8.36 8.36 0 01-2.54.7z"/></svg></a>
+            <a href="#" className="rounded-full border border-white border-opacity-30 p-2 hover:bg-white hover:bg-opacity-10 transition"><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.47.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04A4.28 4.28 0 0016.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.1.99C7.69 8.99 4.07 7.13 1.64 4.16c-.37.64-.58 1.38-.58 2.17 0 1.5.76 2.82 1.92 3.6a4.28 4.28 0 01-1.94-.54v.05c0 2.1 1.5 3.85 3.5 4.25-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.7 2.1 2.94 3.95 2.97A8.6 8.6 0 012 19.54c-.28 0-.56-.02-.83-.05A12.13 12.13 0 006.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0024 4.59a8.36 8.36 0 01-2.54.7z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </Layout>
+);
 
 export default HomePage; 
