@@ -22,6 +22,78 @@ const HomePage = () => (
             <img src={arrowIcon} alt="→" className="w-5 h-5" />
           </button>
         </div>
+
+        {/* Features Section */}
+        <div className="mt-16">
+          <div className="mx-auto rounded-[30px] bg-[#4285F4] relative" style={{ width: '1293px' }}>
+            {/* Microsoft Surface Book */}
+            <div className="absolute" style={{ 
+              width: '560px',
+              height: '332px',
+              left: '371.76px',
+              top: '57.56px'
+            }}>
+              <div className="relative w-full h-full">
+                <img 
+                  src="/MicrosoftSurfaceBook.png"
+                  alt="Microsoft Surface Book"
+                  className="w-full h-full object-contain"
+                />
+                <img 
+                  src="/accueil1.png"
+                  alt="Interface Lumea"
+                  className="absolute top-[10%] left-[8%] w-[84%] h-[75%] object-cover"
+                  style={{
+                    borderRadius: '2px'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Feature Cards */}
+            <div className="flex justify-between gap-8 p-8" style={{ marginTop: '450px' }}>
+              <div className="bg-white rounded-[20px] p-6 flex-1">
+                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Moins de charge mentale</h3>
+                <p className="mt-4 text-[#003FE3]">
+                  Lumea automatise l'organisation des démarches, vous rappelle les échéances importantes et vous guide pas à pas selon votre situation.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-[20px] p-6 flex-1">
+                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Tout au même endroit</h3>
+                <p className="mt-4 text-[#003FE3]">
+                  Un coffre-fort numérique sécurisé pour stocker tous les documents utiles, et des dossiers organisés automatiquement selon les besoins (APA, MDPH, mutuelle...).
+                </p>
+              </div>
+
+              <div className="bg-white rounded-[20px] p-6 flex-1">
+                <h3 className="text-[24px] font-semibold text-[#FF6D00]">Une coordination facilitée</h3>
+                <p className="mt-4 text-[#003FE3]">
+                  Partagez les rendez-vous et les informations avec les autres aidants ou soignants grâce à un calendrier commun et un espace collaboratif.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Laptop Section with Gradient Background */}
+        <div className="flex justify-center mt-[56px]">
+          <div style={{
+            width: '1293px',
+            height: '509px',
+            borderRadius: '30px',
+            background: 'linear-gradient(180deg, #3F8CFF 0%, #003FE3 100%)',
+            flexShrink: 0,
+            marginLeft: '109.5px',
+            marginRight: '109.5px'
+          }}>
+            <img 
+              src="/mockup-laptop.png" 
+              alt="Dashboard Lumea"
+              className="w-full h-full object-contain p-8"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
