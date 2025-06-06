@@ -12,15 +12,15 @@ const Navbar = () => (
 
       {/* Navigation Links - Simplified */}
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#" className="text-[#1A1A1A] hover:text-primary transition-colors text-base font-medium">L'outil Lumea</a>
-        <a href="#" className="text-[#1A1A1A] hover:text-primary transition-colors text-base font-medium">À propos</a>
+        <a href="#" className="text-[#003FE3] text-[20px] font-normal leading-[140%] tracking-[-0.2px] hover:opacity-80 transition-colors">L'outil Lumea</a>
+        <a href="#" className="text-[#003FE3] text-[20px] font-normal leading-[140%] tracking-[-0.2px] hover:opacity-80 transition-colors">À propos</a>
       </div>
 
       {/* CTA Button - Simplified */}
       <div className="hidden md:block">
         <a
           href="#"
-          className="inline-block px-6 py-3 bg-[#FF6D00] text-white rounded-lg hover:bg-[#E56200] transition-colors whitespace-nowrap text-base font-medium"
+          className="inline-block px-6 py-3 bg-[#FF6D00] text-white rounded-lg hover:bg-[#E56200] transition-colors whitespace-nowrap text-[20px] font-normal leading-[140%] tracking-[-0.2px]"
         >
           Accéder à Lumea
         </a>
